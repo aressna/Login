@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+  font: 18px 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+body::before{
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url(Images/Background.png) no-repeat center;   
+  animation: randomBackgroundPosition 400s forwards infinite;
+}
+
+.login-card {
+  display: grid;
+  place-items: center;
+  justify-content: center;
+  box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+h1 {
+  font: 32px 'Poppins', sans-serif, 600;
+  margin-top: 30px;
+}
+
+input {
+  display: block;
+  font-size: 18px;
+  border-radius: 25px;
+  border-color: transparent;
+
+  padding-top: 9px;
+  padding-bottom: 9px;
+
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.email {
+  margin-top: 30px;
+  margin-bottom: 25px;
+
+  margin-left: 45px;
+  margin-right: 45px;
+}
+
+.password {
+  margin-top: 25px;
+  margin-bottom: 30px;
+
+  margin-left: 45px;
+  margin-right: 45px;
+}
+
+.login-button {
+  margin-top: 21.44px;
+  margin-bottom: 50px;
+
+  color: white;
+
+  width: 250px;
+  font-size: 18px;
+
+  padding-top: 8px;
+  padding-bottom: 8px;
+  
+  border-radius: 25px;
+  border-color: transparent;
+
+  background: linear-gradient(45deg, #1da1f2, #0e71f8);
+
+  overflow: hidden;
+}
+
+@keyframes randomBackgroundPosition {
+  0%, 100% {
+    background-position: 0 0; 
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 80% 30%;
+  }
+  75% {
+    background-position: 20% 100%;
+  }
+}
